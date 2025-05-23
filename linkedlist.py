@@ -46,3 +46,22 @@ class LinkedList:
             current = current.next
         print(" -> ".join(elements) if elements else "Empty list")
         
+# Step 3: Test the LinkedList
+if __name__ == "__main__":
+    # Create a new linked list
+    llist = LinkedList()
+
+    # Add some elements
+    llist.append(1)
+    llist.append(2)
+    llist.append(3)
+    llist.prepend(0)
+
+    # Display the list
+    print("Linked List:")
+    llist.display() # Output: 0 -> 1 -> 2 -> 3
+
+    # Delete an element
+    llist.delete(2)
+    print("After deleting 2:")
+    llist.display() # Output: 0 -> 1 -> 3

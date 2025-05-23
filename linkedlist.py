@@ -28,4 +28,21 @@ class LinkedList:
     
     # Delete a node with specific data
     def delete(self, data):
-        if not self.head: 
+        if not self.head: # If list is empty, do nothing
+            return
+        current = self.head 
+        while current.next: # Traverse to find the node
+            if current.next.data == data:
+                current.next = current.next.next # Skip the node to delete
+                return
+            current = current.next
+
+    # Display the linked list
+    def display(self):
+        elements = []
+        current = self.head
+        while current: # Traverse the list
+            elements.append(str(current.data))
+            current = current.next
+        print(" -> ".join(elements) if elements else "Empty list")
+        

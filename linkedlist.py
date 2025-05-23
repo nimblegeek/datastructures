@@ -1,8 +1,9 @@
 # Step 1: Define the Node class
 
-class __init__(self, data):
-    self.data = data #Store data
-    self.next = None #Store reference (or pointer) to next node
+class Node:
+    def __init__(self, data):
+        self.data = data #Store data
+        self.next = None #Store reference (or pointer) to next node
 
 # Step 2: Define the LinkedList class
 class LinkedList: 
